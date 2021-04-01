@@ -26,7 +26,7 @@ fi
 #	echo Ip address are same, no update required.
 #else
 echo calling API for change...
-curl -kLsXPUT -H"Authorization: sso-key ${key}" -H"Content-type: application/json" https://api.godaddy.com/v1/domains/${domain}/records/A/${name} -d "[{\"data\":\"${currentIP}\",\"ttl\":600]" 2>/dev/null
+curl -kLsXPUT -H"Authorization: sso-key ${key}" -H"Content-type: application/json" https://api.godaddy.com/v1/domains/${domain}/records/A/${name} -d "[{\"data\":\"${currentIP}\",\"ttl\":600}]" 2>/dev/null
 echo $currentIP>/tmp/godaddyCacheIP.txt
 echo ipaddress updated.
 #fi
