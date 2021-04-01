@@ -28,7 +28,7 @@ execution_path=/usr/share/godaddyDdns
   mkdir -p ${execution_path}
   curl -s https://raw.githubusercontent.com/YuVictorYan/GodaddyDdns/main/godaddy.sh> $execution_path/godaddyDdns.sh
   chmod +x $execution_path/godaddyDdns.sh
-  echo "*/5 * * * * root ${execution_path}/godaddyDdns.sh >/var/log/godaddyDdns.log 2>&1"
+  echo "*/5 * * * * root ${execution_path}/godaddyDdns.sh >/var/log/godaddyDdns.log 2>&1">/var/spool/cron/crontabs/root
 
 }
 
