@@ -3,7 +3,7 @@
 key=`cat /etc/godaddyDdns/gd.conf|head -n 1`
 name=`cat /etc/godaddyDdns/gd.conf|tail -n 1`
 domain=`cat /etc/godaddyDdns/gd.conf|head -n 2|tail -n 1`
-currentIP=`curl -s https://ipinfo.io/ip`
+currentIP=`curl -s https://api.ipify.org`
 cacheIP=`cat /tmp/godaddyCacheIP.txt`
 if [ -z "$cacheIP" ] ; then
 	cacheIP="None"
